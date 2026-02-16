@@ -36,3 +36,56 @@
 
 </body>
 </html>
+/* Body and Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header-section {
+    background-color: #004a99;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Container and Cards */
+.container {
+    width: 85%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* List Styling */
+.list-items {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.list-items li {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Footer Styling */
+.footer-section {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
