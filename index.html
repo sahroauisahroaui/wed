@@ -2,59 +2,85 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بطاقة تعريف - صحراوي شيماء</title>
-    <link rel="stylesheet" href="style.css">
+    <title>بطاقة تعريف صحراوي شيماء</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .id-card {
+            background: #ffffff;
+            width: 320px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-right: 8px solid #2c3e50; /* تمييز جانبي */
+            text-align: right;
+        }
+        .header {
+            border-bottom: 2px solid #e67e22;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        .info-item {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-left: 5px;
+        }
+        #age-value {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="main-wrapper">
-        <div class="id-card">
-            <div class="card-header">
-                <div class="profile-img-container">
-                    <img src="your-photo.jpg" alt="صحراوي شيماء" class="profile-img">
-                </div>
-                <h2>صحراوي شيماء</h2>
-                <p class="tagline">طالبة في كلية الإعلام الآلي</p>
-            </div>
-
-            <div class="card-body">
-                <div class="info-row">
-                    <span class="label">الاسم الكامل:</span>
-                    <span class="value">صحراوي شيماء (Sahraoui Chaima)</span>
-                </div>
-                <div class="info-row">
-                    <span class="label">العمر:</span>
-                    <span class="value" id="age-display">جاري الحساب...</span>
-                </div>
-                <div class="info-row">
-                    <span class="label">الجامعة:</span>
-                    <span class="value">جامعة الشهيد حمة لخضر - الوادي</span>
-                </div>
-                <div class="info-row">
-                    <span class="label">المستوى:</span>
-                    <span class="value">سنة ثانية (L2 Informatique)</span>
-                </div>
-            </div>
-
-            <div class="card-footer">
-                <p>مختبر تطوير تطبيقات الويب 2026</p>
-            </div>
+    <div class="id-card">
+        <div class="header">
+            <h2 style="margin:0; color:#2c3e50;">بطاقة طالبة</h2>
+        </div>
+        
+        <div class="info-item">
+            <span class="label">الاسم:</span> صحراوي شيماء
+        </div>
+        
+        <div class="info-item">
+            <span class="label">العمر:</span> <span id="age-value">جاري الحساب...</span>
+        </div>
+        
+        <div class="info-item">
+            <span class="label">التخصص:</span> Informatique (L2)
+        </div>
+        
+        <div class="info-item">
+            <span class="label">الجامعة:</span> الشهيد حمة لخضر - الوادي
         </div>
     </div>
 
     <script>
-        function updateAge() {
-            const birth = new Date('2006-03-28'); // تاريخ ميلادك
-            const now = new Date(); 
-            let years = now.getFullYear() - birth.getFullYear();
-            const monthDiff = now.getMonth() - birth.getMonth();
-            if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birth.getDate())) {
-                years--;
+        // حساب العمر بدقة بناءً على تاريخ ميلادك المذكور
+        function calculateAge() {
+            const birthDate = new Date('2006-03-28'); // تاريخ ميلادك
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
             }
-            document.getElementById('age-display').innerText = years + " سنة";
+            document.getElementById('age-value').innerText = age + " سنة";
         }
-        window.onload = updateAge;
+        window.onload = calculateAge;
     </script>
+
 </body>
 </html>
