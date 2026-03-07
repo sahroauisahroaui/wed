@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 01 - Web Development</title>
+    <title>بطاقة تعريف - صحراوي شيماء</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header-section">
-        <h1>Web Application Development</h1>
-        <p>Welcome to Lab 01 Repository</p>
-    </header>
+    <div class="main-wrapper">
+        <div class="id-card">
+            <div class="card-header">
+                <div class="profile-img-container">
+                    <img src="your-photo.jpg" alt="صحراوي شيماء" class="profile-img">
+                </div>
+                <h2>صحراوي شيماء</h2>
+                <p class="tagline">طالبة في كلية الإعلام الآلي</p>
+            </div>
 
-    <main class="container">
-        <section class="card">
-            <h2>Lab Objectives</h2>
-            <ul class="list-items">
-                <li>Set up a GitHub repository</li>
-                <li>Create structured HTML files</li>
-                <li>Apply CSS styling using classes</li>
-                <li>Understand web layout basics</li>
-            </ul>
-        </section>
+            <div class="card-body">
+                <div class="info-row">
+                    <span class="label">الاسم الكامل:</span>
+                    <span class="value">صحراوي شيماء (Sahraoui Chaima)</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">العمر:</span>
+                    <span class="value" id="age-display">جاري الحساب...</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">الجامعة:</span>
+                    <span class="value">جامعة الشهيد حمة لخضر - الوادي</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">المستوى:</span>
+                    <span class="value">سنة ثانية (L2 Informatique)</span>
+                </div>
+            </div>
 
-        <section class="card">
-            <h2>Prerequisites</h2>
-            <p>Computer with internet, Browser, and Text Editor (VS Code).</p>
-        </section>
-    </main>
+            <div class="card-footer">
+                <p>مختبر تطوير تطبيقات الويب 2026</p>
+            </div>
+        </div>
+    </div>
 
-    <footer class="footer-section">
-        <p>&copy; 2026 Web Dev Lab Submission</p>
-    </footer>
-
+    <script>
+        function updateAge() {
+            const birth = new Date('2006-03-28'); // تاريخ ميلادك
+            const now = new Date(); 
+            let years = now.getFullYear() - birth.getFullYear();
+            const monthDiff = now.getMonth() - birth.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birth.getDate())) {
+                years--;
+            }
+            document.getElementById('age-display').innerText = years + " سنة";
+        }
+        window.onload = updateAge;
+    </script>
 </body>
 </html>
