@@ -1,65 +1,58 @@
-/* إعدادات الخط العام (الخط المطلوب هو Cambria) */
+/* Style général du corps de la page */
 body {
+    /* Utilisation de la police 'Cambria' spécifiée sur le tableau */
     font-family: 'Cambria', serif;
-    background-color: #f0f2f5;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding-top: 60px;
 }
 
-/* الحاوية الرئيسية للموقع */
-.main-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 700px;
-    border: 1px solid #ccc;
+/* Le conteneur principal (Le cadre noir) */
+.container {
+    width: 650px;
+    border: 2px solid #000; /* Cadre noir comme sur le dessin */
+    padding: 25px;
+    background-color: #ffffff;
 }
 
-/* تنسيق العنوان كما في الصورة (Font size/Color) */
+/* Style du titre (Taille 32px et Couleur noire) */
 h1 {
     text-align: center;
-    font-size: 32px; /* الحجم المطلوب في الدائرة الحمراء */
-    color: #1a1a1a;
+    font-size: 32px; 
+    color: #000;
     margin-bottom: 10px;
 }
 
-/* تنسيق المحتوى ليكون النص على جهة والصورة على جهة */
-.profile-content {
+/* Disposition du contenu en deux colonnes (Flexbox) */
+.main-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     margin-top: 30px;
 }
 
-/* تنسيق نصوص المعلومات */
-.info-text p {
-    font-size: 20px;
-    margin: 15px 0;
-    color: #333;
+/* Style des paragraphes d'information */
+.personal-info p {
+    font-size: 19px;
+    margin: 12px 0;
 }
 
-.info-text strong {
-    color: #000;
-}
-
-/* تنسيق مربع الصورة (Pict) المرسوم على السبورة */
-.image-box {
-    width: 200px;
-    height: 200px;
-    border: 2px dashed #555; /* إطار متقطع */
+/* Style du carré de l'image (Pict Box) */
+.pict-box {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #000;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fafafa;
+    align-items: center;    /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    background-color: #f9f9f9;
+    font-weight: bold;
 }
 
-.dimensions {
+/* Dimensions sous l'image */
+.image-section p {
     text-align: center;
     font-size: 14px;
-    color: #777;
+    color: #555;
     margin-top: 5px;
 }
