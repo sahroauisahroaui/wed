@@ -1,86 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="ar" dir="rtl"> <head>
     <meta charset="UTF-8">
-    <title>بطاقة تعريف صحراوي شيماء</title>
-    <style>
-        body {
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-        .id-card {
-            background: #ffffff;
-            width: 320px;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border-right: 8px solid #2c3e50; /* تمييز جانبي */
-            text-align: right;
-        }
-        .header {
-            border-bottom: 2px solid #e67e22;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-        }
-        .info-item {
-            margin: 10px 0;
-            font-size: 1.1em;
-            color: #333;
-        }
-        .label {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-left: 5px;
-        }
-        #age-value {
-            color: #e67e22;
-            font-weight: bold;
-        }
-    </style>
-</head>
+    <title>موقعي الشخصي - شيماء</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
 
-    <div class="id-card">
-        <div class="header">
-            <h2 style="margin:0; color:#2c3e50;">بطاقة طالبة</h2>
-        </div>
-        
-        <div class="info-item">
-            <span class="label">الاسم:</span> صحراوي شيماء
-        </div>
-        
-        <div class="info-item">
-            <span class="label">العمر:</span> <span id="age-value">جاري الحساب...</span>
-        </div>
-        
-        <div class="info-item">
-            <span class="label">التخصص:</span> Informatique (L2)
-        </div>
-        
-        <div class="info-item">
-            <span class="label">الجامعة:</span> الشهيد حمة لخضر - الوادي
+    <div class="main-card">
+        <h1>Welcome to my website</h1>
+        <hr> <div class="profile-content">
+            <div class="info-text">
+                <p><strong>Full Name:</strong> Sahraoui Chaima</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Class:</strong> L2 Computer Science</p>
+                <p><strong>University:</strong> Echahid Hamma Lakhdar</p>
+            </div>
+
+            <div class="image-area">
+                <div class="image-box">
+                    <span>Pict</span> </div>
+                <p class="dimensions">250 x 250</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        // حساب العمر بدقة بناءً على تاريخ ميلادك المذكور
-        function calculateAge() {
-            const birthDate = new Date('2006-03-28'); // تاريخ ميلادك
-            const today = new Date();
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            document.getElementById('age-value').innerText = age + " سنة";
-        }
-        window.onload = calculateAge;
-    </script>
 
 </body>
 </html>
