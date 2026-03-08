@@ -1,53 +1,65 @@
-/* Body and Layout */
+/* إعدادات الخط العام (الخط المطلوب هو Cambria) */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Cambria', serif;
     background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
 }
 
-/* Header Styling */
-.header-section {
-    background-color: #004a99;
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-}
-
-/* Container and Cards */
-.container {
-    width: 85%;
-    max-width: 800px;
-    margin: 30px auto;
-}
-
-.card {
-    background: #ffffff;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+/* الحاوية الرئيسية للموقع */
+.main-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 700px;
+    border: 1px solid #ccc;
 }
 
-/* List Styling */
-.list-items {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-.list-items li {
-    margin-bottom: 10px;
-    color: #444;
-}
-
-/* Footer Styling */
-.footer-section {
+/* تنسيق العنوان كما في الصورة (Font size/Color) */
+h1 {
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    font-size: 32px; /* الحجم المطلوب في الدائرة الحمراء */
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+/* تنسيق المحتوى ليكون النص على جهة والصورة على جهة */
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+/* تنسيق نصوص المعلومات */
+.info-text p {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.info-text strong {
+    color: #000;
+}
+
+/* تنسيق مربع الصورة (Pict) المرسوم على السبورة */
+.image-box {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #555; /* إطار متقطع */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.dimensions {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
 }
